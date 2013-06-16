@@ -11,6 +11,7 @@
 
     <!-- Required stylesheet -->
     <link rel="stylesheet" href="core/deck.core.css">
+    <link rel="stylesheet" href="css/Prism.css"  />
 
     <!-- Extension CSS files go here. Remove or add as needed. -->
     <link rel="stylesheet" href="extensions/goto/deck.goto.css">
@@ -93,40 +94,34 @@
             </ul>
         </div>
     </section>
-     
-    <section class="slide" id="lineHeightSmallDemo">
+    <section class="slide easyIn">
+        <h1>Small differences = huge pain</h1>
+    </section>
+
+    <section class="slide">
         <div class="leftColl">
             <div class="source">
                 <h3>CSS</h3>
-                <pre data-kind="css"></pre>
+                <pre data-kind="css" data-source="reset"></pre>
             </div>
         </div>
         <div class="rightColl">
-            <div class="preview">
-                <h2>Hello world</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac purus ac sapien mattis dictum vel nec orci. Mauris convallis mi a turpis pharetra varius. Donec risus ante, sagittis id purus vitae, sodales porttitor sem. Integer sit amet mauris vitae nulla aliquam volutpat id sed urna. Donec metus lorem, egestas sed mauris ut, pulvinar interdum lectus. In vel semper metus, nec pretium velit. Duis eu turpis quis risus ultricies eleifend. Maecenas pellentesque elit nulla, a mattis odio luctus nec. Curabitur venenatis, leo at accumsan ultricies, lectus massa luctus sapien, eu elementum tellus sapien non elit. Morbi rutrum commodo justo, sed mattis mauris fermentum eu. Cras eu tellus erat.</p>
-                <p>Pellentesque imperdiet rhoncus arcu, et consectetur libero volutpat eu. Fusce tempus sodales nisl eget vehicula. Aliquam auctor vestibulum neque, a aliquam felis molestie consectetur. Vestibulum molestie mi at sollicitudin tempor. Suspendisse at adipiscing mi. Mauris adipiscing tincidunt quam at sagittis. Phasellus consectetur fermentum accumsan. In at est tristique, rhoncus metus a, aliquet felis. Mauris euismod eget dui eu porta. Vestibulum dapibus porta ultrices. Nam lacinia, mauris ultricies tincidunt varius, dolor risus dapibus arcu, in congue mauris nisl at odio.</p>
-            </div>
+            <div class="preview" data-source="reset"></div>
         </div>
     </section>
-    <section class="slide" id="lineHeightDemo">
-        <div class="leftColl">
-            <div class="source">
-                <h3>CSS</h3>
-                <pre data-kind="css"></pre>
-            </div>
-        </div>
-        <div class="rightColl">
-            <div class="preview">
-                <h2>Hello world</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac purus ac sapien mattis dictum vel nec orci. Mauris convallis mi a turpis pharetra varius. Donec risus ante, sagittis id purus vitae, sodales porttitor sem. Integer sit amet mauris vitae nulla aliquam volutpat id sed urna. Donec metus lorem, egestas sed mauris ut, pulvinar interdum lectus. In vel semper metus, nec pretium velit. Duis eu turpis quis risus ultricies eleifend. Maecenas pellentesque elit nulla, a mattis odio luctus nec. Curabitur venenatis, leo at accumsan ultricies, lectus massa luctus sapien, eu elementum tellus sapien non elit. Morbi rutrum commodo justo, sed mattis mauris fermentum eu. Cras eu tellus erat.</p>
-                <p>Pellentesque imperdiet rhoncus arcu, et consectetur libero volutpat eu. Fusce tempus sodales nisl eget vehicula. Aliquam auctor vestibulum neque, a aliquam felis molestie consectetur. Vestibulum molestie mi at sollicitudin tempor. Suspendisse at adipiscing mi. Mauris adipiscing tincidunt quam at sagittis. Phasellus consectetur fermentum accumsan. In at est tristique, rhoncus metus a, aliquet felis. Mauris euismod eget dui eu porta. Vestibulum dapibus porta ultrices. Nam lacinia, mauris ultricies tincidunt varius, dolor risus dapibus arcu, in congue mauris nisl at odio.</p>
-            </div>
-        </div>
+    
+    <section class="slide invert">
+        <h1>#2 - Vertical Rythm</h1>
     </section>
-
+    <section class="slide">
+        <div class="leftColl"><div class="source"><h3>CSS</h3><pre data-kind="css" data-source="lineHeight"></pre></div></div>
+        <div class="rightColl"><div class="preview" data-source="lineHeight"></div></div>
+    </section>
+    <section class="slide">
+        <div class="leftColl"><div class="source"><h3>CSS</h3><pre data-kind="css" data-source="badLineHeight"></pre></div></div>
+        <div class="rightColl"><div class="preview" data-source="badLineHeight"></div></div>
+    </section>
+    
     <!-- End slides. -->
 
 
@@ -162,7 +157,8 @@
     <script src="extensions/goto/deck.goto.js"></script>
     <script src="extensions/status/deck.status.js"></script>
     <script src="extensions/navigation/deck.navigation.js"></script>
-    
+    <script src="lib/prism.js"></script>
+
     <!-- Initialize the deck. You can put this in an external file if desired. -->
     <script src="lib/default.js"></script>
     

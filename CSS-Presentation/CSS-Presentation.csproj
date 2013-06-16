@@ -57,9 +57,16 @@
     <Reference Include="System.EnterpriseServices" />-->
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\Prism.css" />
+    <Content Include="demo\badLineHeight.css" />
+    <Content Include="demo\badLineHeight.html" />
     <Content Include="demo\clean.html" />
     <Content Include="core\deck.core.css" />
     <Content Include="core\deck.core.js" />
+    <Content Include="demo\lineHeight.css" />
+    <Content Include="demo\lineHeight.html" />
+    <Content Include="demo\reset.css" />
+    <Content Include="demo\reset.html" />
     <Content Include="demo\demo.css" />
     <Content Include="extensions\goto\deck.goto.css" />
     <Content Include="extensions\goto\deck.goto.html" />

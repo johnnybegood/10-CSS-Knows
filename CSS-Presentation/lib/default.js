@@ -21,30 +21,60 @@
     $(init);
     
     function init() {
+        /// <summary>Initialize app</summary>
         container = $(".deck-container");
         $.deck('.slide');
     }
     
     function changeSlide(event, from, to) {
-        var slide = $(".slide").eq(11);
+        /// <summary>Event triggerd when moving between slides</summary>
+        /// <param name="event" type="Object"></param>
+        /// <param name="from" type="Number">Previous slide number</param>
+        /// <param name="to" type="Number">Current slide number</param>
+        var slide = $(".slide").eq(to);
         
         if (slide.length == 1) {
-            var sourcePre = slide.find(".source pre");
+            fillCode(slide);
+            fillPreview(slide);
+        }
+    }
+    
+    function fillPreview(slide) {
+        /// <summary>Fill the preview block on the slide</summary>
+        /// <param name="slide" type="JQuery">The current slide</param>
+        var previewEl = slide.find(".preview");
+        
+        if (previewEl && previewEl.data("source")) {
+            var sourceFile = "demo/" + previewEl.data("source") + ".html";
+            //$.get(sourceFile).done(_.partial(previewCallback, previewEl));
+            previewEl.append("<iframe src='" + sourceFile + "' />");
+        }
+    }
+    
+    function previewCallback(destination, content) {
+        //destination.append("<iframe src=")
+    }
 
+    function fillCode(slide) {
+        /// <summary>Fill the code block on the slide</summary>
+        /// <param name="slide" type="JQuery">The current slide</param>
+        var sourcePre = slide.find(".source pre");
+
+        if (sourcePre && sourcePre.not(".content-loaded")) {
             var id = slide[0].id;
             var kind = sourcePre.data("kind");
             var sourceFile = "demo/" + (sourcePre.data("source") || "demo") + "." + kind;
-            
+
             if (kind) {
                 var callBack;
 
                 switch (kind) {
-                    case "css":
-                        callBack = _.partial(fillCss, id, sourcePre);
-                        break;
-                    case "html":
-                        callBack =_.partial(fillHtml, id, sourcePre);
-                        break;
+                case "css":
+                    callBack = _.partial(fillCss, id, sourcePre);
+                    break;
+                case "html":
+                    callBack = _.partial(fillHtml, id, sourcePre);
+                    break;
                 }
 
                 if (callBack) {
@@ -53,25 +83,21 @@
             }
         }
     }
-    
+
     function fillCss(id, destination, content) {
-        var indicator = "/* " + id + " */";
-        var startLocation = content.indexOf(indicator) + indicator.length;
-        var endLocation = content.indexOf("/* ", startLocation);
-        
-        if (endLocation == -1) {
-            endLocation = content.length;
-        }
+       appendCode(destination, content, "css");
+    }
 
-        var partialCss = content.substring(startLocation, endLocation);
-
-        partialCss = partialCss.replace("#" + id + " .preview {", "body {");
-        partialCss = partialCss.replace("#" + id + " .preview", "");
-
-        destination.html(partialCss);
+    function fillHtml(id, destination, content) {
+        appendCode(destination, content, "markup");
     }
     
-    function fillHtml(id, destination, content) {
-        destination.text(content);
+    function appendCode(destination, content, kind) {
+        destination.addClass("language-" + kind + " content-loaded").empty();
+        $("<code></code>")
+            .addClass("language-" + kind)
+            .text(content)
+            .appendTo(destination);
+        Prism.highlightElement(destination[0]);
     }
 }());
