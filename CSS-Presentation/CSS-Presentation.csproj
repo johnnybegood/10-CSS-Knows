@@ -94,7 +94,6 @@
     <Content Include="Images\Zen-Garden-ex2.png" />
     <Content Include="Images\Zen-Garden-ex3.png" />
     <Content Include="Images\Zen-Garden.png" />
-    <Content Include="introduction\index.html" />
     <Content Include="lib\jquery-1.7.2.min.js" />
     <Content Include="lib\modernizr.custom.js" />
     <Content Include="lib\prism.js" />
@@ -118,14 +117,14 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="core\deck.core.scss" />
-    <None Include="css\default.css" />
+    <Content Include="css\default.css" />
     <Content Include="extensions\goto\deck.goto.scss" />
     <Content Include="extensions\hash\deck.hash.scss" />
     <Content Include="extensions\menu\deck.menu.scss" />
     <Content Include="extensions\navigation\deck.navigation.scss" />
     <Content Include="extensions\scale\deck.scale.scss" />
     <Content Include="extensions\status\deck.status.scss" />
-    <None Include="lib\default.js" />
+    <Content Include="lib\default.js" />
     <Content Include="index.html" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +140,8 @@
     <Content Include="themes\Fonts\bariol_regular-webfont.eot" />
     <Content Include="themes\Fonts\bariol_regular-webfont.ttf" />
     <Content Include="themes\Fonts\bariol_regular-webfont.woff" />
+    <None Include="Properties\PublishProfiles\css-demo - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\css-demo - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
