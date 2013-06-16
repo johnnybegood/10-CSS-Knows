@@ -7,9 +7,13 @@
 }
 
 .leftColl {
-    float: left;
-    margin-right: 10px !important;
-    max-width: 50%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding: 10px ! important;
+    margin-left: -48px !important;
+    top: 0;
+    bottom: 0;
 }
 
 .rightColl {
@@ -45,3 +49,18 @@
         .verticalList .item.deck-before, .verticalList .item.deck-previous, .verticalList .item.deck-current {
             color: black;
         }
+
+.replace {
+    list-style: none;   
+}
+    .replace .deck-before, .replace .deck-previous { 
+        display: none;
+    }
+
+    .csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide .replace > .slide {
+        -webkit-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+        -moz-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+        -ms-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+        -o-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+        transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    }

@@ -57,10 +57,10 @@
     <Reference Include="System.EnterpriseServices" />-->
   </ItemGroup>
   <ItemGroup>
-    <Content Include="clean.html" />
+    <Content Include="demo\clean.html" />
     <Content Include="core\deck.core.css" />
     <Content Include="core\deck.core.js" />
-    <Content Include="css\demo.css" />
+    <Content Include="demo\demo.css" />
     <Content Include="extensions\goto\deck.goto.css" />
     <Content Include="extensions\goto\deck.goto.html" />
     <Content Include="extensions\goto\deck.goto.js" />
@@ -77,6 +77,12 @@
     <Content Include="extensions\status\deck.status.css" />
     <Content Include="extensions\status\deck.status.html" />
     <Content Include="extensions\status\deck.status.js" />
+    <Content Include="Images\macml_safari_6.0.png" />
+    <Content Include="Images\win7_chrome_27.0.png" />
+    <Content Include="Images\win7_firefox_20.0.png" />
+    <Content Include="Images\win7_ie_8.0.png" />
+    <Content Include="Images\win7_opera_12.14.png" />
+    <Content Include="Images\win8_ie_10.0_Desktop.png" />
     <Content Include="Images\Zen-Garden-ex1.png" />
     <Content Include="Images\Zen-Garden-ex2.png" />
     <Content Include="Images\Zen-Garden-ex3.png" />
@@ -84,6 +90,7 @@
     <Content Include="introduction\index.html" />
     <Content Include="lib\jquery-1.7.2.min.js" />
     <Content Include="lib\modernizr.custom.js" />
+    <Content Include="lib\prism.js" />
     <Content Include="lib\underscore.js" />
     <Content Include="themes\Fonts\bariol_bold-webfont.svg" />
     <Content Include="themes\Fonts\bariol_light-webfont.svg" />

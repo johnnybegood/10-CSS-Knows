@@ -15,7 +15,7 @@
 (function () {
     "use strict";
 
-    var demoCss, container, cssLoader;
+    var container;
 
     $(document).bind('deck.change', changeSlide);
     $(init);
@@ -25,42 +25,53 @@
         $.deck('.slide');
     }
     
-    function demoCssLoaded(content) {
-        demoCss = content;
-    }
-    
     function changeSlide(event, from, to) {
-        var slide = container.find(".slide:nth-of-type(" + (to+1) + ")");
+        var slide = $(".slide").eq(11);
         
         if (slide.length == 1) {
             var sourcePre = slide.find(".source pre");
 
-            if (sourcePre.data("kind") == "css") {
-                var callBack = _.partial(fillCss, slide[0].id, sourcePre);
+            var id = slide[0].id;
+            var kind = sourcePre.data("kind");
+            var sourceFile = "demo/" + (sourcePre.data("source") || "demo") + "." + kind;
+            
+            if (kind) {
+                var callBack;
 
-                if (cssLoader) {
-                    callBack();
-                } else {
-                    $.get("css/demo.css").done(demoCssLoaded).done(callBack);
+                switch (kind) {
+                    case "css":
+                        callBack = _.partial(fillCss, id, sourcePre);
+                        break;
+                    case "html":
+                        callBack =_.partial(fillHtml, id, sourcePre);
+                        break;
+                }
+
+                if (callBack) {
+                    $.get(sourceFile).done(callBack);
                 }
             }
         }
     }
     
-    function fillCss(name, destination) {
-        var indicator = "/* " + name + " */";
-        var startLocation = demoCss.indexOf(indicator) + indicator.length;
-        var endLocation = demoCss.indexOf("/* ", startLocation);
+    function fillCss(id, destination, content) {
+        var indicator = "/* " + id + " */";
+        var startLocation = content.indexOf(indicator) + indicator.length;
+        var endLocation = content.indexOf("/* ", startLocation);
         
         if (endLocation == -1) {
-            endLocation = demoCss.length;
+            endLocation = content.length;
         }
 
-        var partialCss = demoCss.substring(startLocation, endLocation);
+        var partialCss = content.substring(startLocation, endLocation);
 
-        partialCss = partialCss.replace("#" + name + " .preview {", "body {");
-        partialCss = partialCss.replace("#" + name + " .preview", "");
+        partialCss = partialCss.replace("#" + id + " .preview {", "body {");
+        partialCss = partialCss.replace("#" + id + " .preview", "");
 
         destination.html(partialCss);
+    }
+    
+    function fillHtml(id, destination, content) {
+        destination.text(content);
     }
 }());

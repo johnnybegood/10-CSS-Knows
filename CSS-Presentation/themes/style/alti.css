@@ -18,15 +18,31 @@
     text-transform: capitalize;
 }
 
-.deck-container .slide.invert {
+.deck-container .slide.invert, .leftColl {
   background: #3398CC;
 }
 
-.slide.invert h1, .slide.invert h2, .slide.invert h3, .slide.invert h4 {
+.slide.invert h1, .slide.invert h2, .slide.invert h3, .slide.invert h4, .leftColl h1, .leftColl h2, .leftColl h3 {
     font-family: "bariol_bold";
     color: white;
 }
 
 .slide.invert a {
     color: white;
+}
+
+.leftColl pre {
+    border-color: #cde;
+    background: #fff;
+    position: relative;
+    z-index: auto;
+    max-height: 700px;
+    overflow: auto;
+    font-size: 0.6em;
+}
+
+.borderradius .leftColl pre {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
