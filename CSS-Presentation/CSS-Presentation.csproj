@@ -126,6 +126,7 @@
     <Content Include="themes\Fonts\bariol_regular-webfont.eot" />
     <Content Include="themes\Fonts\bariol_regular-webfont.ttf" />
     <Content Include="themes\Fonts\bariol_regular-webfont.woff" />
+    <Content Include="readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
