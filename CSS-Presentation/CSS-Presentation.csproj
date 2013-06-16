@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />-->
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clean.html" />
     <Content Include="core\deck.core.css" />
     <Content Include="core\deck.core.js" />
     <Content Include="css\demo.css" />

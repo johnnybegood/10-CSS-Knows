@@ -26,3 +26,7 @@
     font-family: "bariol_bold";
     color: white;
 }
+
+.slide.invert a {
+    color: white;
+}
