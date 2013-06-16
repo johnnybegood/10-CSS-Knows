@@ -126,7 +126,7 @@
     <Content Include="extensions\scale\deck.scale.scss" />
     <Content Include="extensions\status\deck.status.scss" />
     <None Include="lib\default.js" />
-    <None Include="index.html" />
+    <Content Include="index.html" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="themes\transition\fade.scss" />
