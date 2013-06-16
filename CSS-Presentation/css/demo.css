@@ -1,0 +1,17 @@
+﻿/* lineHeightSmallDemo */
+#lineHeightSmallDemo .preview {
+    line-height: 0.5em;
+}
+
+#lineHeightSmallDemo .preview  h2 {
+    font-size: 2em;
+}
+
+/* lineHeightDemo */
+#lineHeightDemo .preview {
+    line-height: 1.5em;
+}
+
+#lineHeightDemo .preview  h2 {
+    font-size: 2em;
+}

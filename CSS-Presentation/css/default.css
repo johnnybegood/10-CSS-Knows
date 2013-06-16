@@ -1,0 +1,47 @@
+﻿.csstransitions.csstransforms .deck-container > .slide.easyIn {
+    -webkit-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.leftColl {
+    float: left;
+    margin-right: 10px !important;
+    max-width: 50%;
+}
+
+.rightColl {
+    float: right;
+    margin-left: 10px !important;
+    max-width: 50%;
+}
+
+.grid-3 {
+    list-style: none;
+    width: 100%;
+}
+
+    .grid-3 li {
+        float: left;
+    }
+
+.verticalList {
+    list-style: none;
+    color: #D1D2D4;
+}
+
+    .verticalList .item {
+        display: inline-block;
+        margin: 0 20px 0 0;
+    }
+
+        .verticalList .item + .item:before {
+            content: "- ";
+            margin: 0 20px 0 0;
+        }
+
+        .verticalList .item.deck-before, .verticalList .item.deck-previous, .verticalList .item.deck-current {
+            color: black;
+        }
