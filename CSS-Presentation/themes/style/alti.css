@@ -45,3 +45,25 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
+ul.medium  {
+    font-family: "bariol_bold";
+    color: #3398CC;
+    font-size: 2em;
+    line-height: 1.6em;
+}
+
+ul.medium li {
+    margin: 0;
+    padding: 0;
+}
+
+ul li.highlight {
+    color: #35CC29;
+}
+
+.deck-container div.leftTitle {
+    font-family: "bariol_bold";
+    text-transform: lowercase;
+    color: #FF6026;
+}

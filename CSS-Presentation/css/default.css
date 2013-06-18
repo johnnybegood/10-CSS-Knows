@@ -1,9 +1,13 @@
-﻿.csstransitions.csstransforms .deck-container > .slide.easyIn {
+.csstransitions.csstransforms .deck-container > .slide.easyIn {
     -webkit-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     -moz-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     -ms-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     -o-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+ul.noBullet {
+    list-style: none;
 }
 
 .leftColl {
@@ -77,3 +81,14 @@
         -o-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
         transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     }
+    
+.deck-container div.leftTitle {
+    font-size: 3em;
+    line-height: 3em;
+}
+/*
+.leftTitle + ul {
+    float: left;
+}
+
+.leftTitle + ul:after { content: "."; visibility:hidden; clear:both;}*/
