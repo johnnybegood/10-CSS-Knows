@@ -1,0 +1,19 @@
+﻿section {
+    border: 3px solid green;
+    padding: 1.5em;
+}
+
+section:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+
+div {
+    border: 1px solid red;
+    float: left;
+    width: 300px;
+}

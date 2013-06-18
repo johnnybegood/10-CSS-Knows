@@ -1,0 +1,15 @@
+﻿body {
+    line-height: 1.3;
+}
+
+a[href]:after {
+    content: " - " attr(href);
+    padding-left: 0.2em;
+    color: red;
+    font-weight: bold;
+}
+
+abbr:after {
+    content: "(" attr(title) ")";
+    color: blue;
+}

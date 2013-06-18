@@ -1,0 +1,16 @@
+﻿section {
+    border: 3px solid green;
+    padding: 1.5em;
+}
+
+div {
+    border: 1px solid red;
+    float: left;
+    width: 300px;
+}
+
+div.main {
+    clear: both;
+    border: 3px solid purple;
+    padding: 1.5em;
+}

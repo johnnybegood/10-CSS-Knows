@@ -65,5 +65,10 @@ ul li.highlight {
 .deck-container div.leftTitle {
     font-family: "bariol_bold";
     text-transform: lowercase;
-    color: #FF6026;
+    color: #ED1E48;
 }
+
+em {
+  color: #ED1E48;  
+}
+
