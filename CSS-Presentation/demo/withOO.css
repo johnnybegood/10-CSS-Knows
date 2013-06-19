@@ -1,0 +1,19 @@
+﻿
+.box {
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.box + .box {
+    margin-top: 1.5em;
+}
+
+.primary {
+    background: #3398CC;
+    color: white;
+}
+
+.secondary {
+    background: #ED1E48;
+    color: white;
+}

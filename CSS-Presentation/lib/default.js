@@ -98,6 +98,6 @@
             .addClass("language-" + kind)
             .text(content)
             .appendTo(destination);
-        Prism.highlightElement(destination[0]);
+        Prism.highlightElement(destination.find("code")[0]);
     }
 }());

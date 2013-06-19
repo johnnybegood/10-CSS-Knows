@@ -1,0 +1,14 @@
+﻿.summary {
+    border-radius: 5px;
+    background: #3398CC;
+    color: white;
+    padding: 0.5em;
+}
+
+.preamble {
+    border-radius: 5px;
+    background: #ED1E48;
+    color: white;
+    padding: 2em;
+    margin-top: 1.5em;
+}

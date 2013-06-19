@@ -38,6 +38,12 @@
     z-index: auto;
     max-height: 700px;
     overflow: auto;
+    -ms-word-wrap: normal;
+    word-wrap: normal;
+}
+
+.deck-container pre.small {
+    font-size: 0.6em;
 }
 
 .borderradius .leftColl pre {
