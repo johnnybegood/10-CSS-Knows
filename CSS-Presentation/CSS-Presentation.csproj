@@ -60,6 +60,10 @@
     <Content Include="css\Prism.css" />
     <Content Include="demo\beforeOO.css" />
     <Content Include="demo\beforeOO.html" />
+    <Content Include="demo\bootstrap.css" />
+    <Content Include="demo\bootstrap.html" />
+    <Content Include="demo\less.css" />
+    <Content Include="demo\lessCompiled.css" />
     <Content Include="demo\withOO.css" />
     <Content Include="demo\withOO.html" />
     <Content Include="demo\grid.html" />
